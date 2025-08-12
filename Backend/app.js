@@ -2,6 +2,10 @@ const express = require("express")
 const mongoconnect = require("./Config/dbConnect.js")
 const cors = require("cors")
 const app = express()
+const authRoute = require("./Routes/AuthRoute.js")
+
+app.use(express.json())
+app.use(cors())
 
 app.listen(8080,async () => {
     console.log("App started")
@@ -9,5 +13,7 @@ app.listen(8080,async () => {
 })
 
 app.get("/",async (req,res) => {
-    console.log("Welcome to expense tracker")
+    res.send("Welcome to expense tracker")
 })
+
+app.use("/auth",authRoute)
