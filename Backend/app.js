@@ -3,6 +3,7 @@ const mongoconnect = require("./Config/dbConnect.js")
 const cors = require("cors")
 const app = express()
 const authRoute = require("./Routes/AuthRoute.js")
+const TransactionRoute = require("./Routes/TransactionRoute.js")
 
 app.use(express.json())
 app.use(cors())
@@ -17,3 +18,4 @@ app.get("/",async (req,res) => {
 })
 
 app.use("/auth",authRoute)
+app.use("/transaction",TransactionRoute)
