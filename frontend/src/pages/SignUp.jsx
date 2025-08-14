@@ -14,7 +14,6 @@ const SignUp = () => {
             "email":email,
             "password":password
         })
-        console.log(SignUpAPI);
         
         if (SignUpAPI.data.message == "Signedup") {
             navigate("/signin",{

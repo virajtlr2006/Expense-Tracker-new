@@ -9,6 +9,7 @@ import Profile from './pages/Profile.jsx';
 import EditProfile from './pages/EditProfile.jsx';
 import Entry from './pages/Entry.jsx';
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
