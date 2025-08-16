@@ -1,7 +1,7 @@
 const mongoose = require ("mongoose")
 
 const transactionSchema = new mongoose.Schema({
-    from:String,
+    email:String,
     to:String,
     type:String,
     expense:String,

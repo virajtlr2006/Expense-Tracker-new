@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router'
 const Entry = () => {
 
     const navigate = useNavigate()
-    const [from, setFrom] = useState("")
     const [to, setto] = useState("")
     const [type, setType] = useState("")
     const [expense, setExpense] = useState("")
@@ -17,14 +16,17 @@ const Entry = () => {
         // const {from,to,type,expense,amount} = req.body
         const email = localStorage.getItem("email")
         const entry = await axios.post("http://localhost:8080/transaction/entry",{
-            from,
+            email,
             to,
             type,
             expense,
             amount
         }) 
+
+        
         if (entry.data.message == "Successful Entry"){
             alert("Entry Successful")
+            navigate("/")
             console.log(entry.data);
             
         }
@@ -34,7 +36,6 @@ const Entry = () => {
     }
     return (
         <div>
-            <input type="text" placeholder='from' onChange={(e)=>setFrom(e.target.value)}/>
             <input type="text" placeholder='to' onChange={(e)=>setto(e.target.value)}/>
             <input type="text" placeholder='type' onChange={(e)=>setType(e.target.value)}/>
             <input type="text" placeholder='expense' onChange={(e)=>setExpense(e.target.value)}/>

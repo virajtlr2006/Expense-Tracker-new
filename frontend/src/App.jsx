@@ -1,10 +1,9 @@
 import React from 'react'
-import Entry from './pages/Entry'
 
 const App = () => {
   return (
     <div>
-      <Entry/>
+      Home
     </div>
   )
 }

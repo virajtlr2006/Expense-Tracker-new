@@ -8,6 +8,7 @@ import SignIn from './pages/SignIn.jsx';
 import Profile from './pages/Profile.jsx';
 import EditProfile from './pages/EditProfile.jsx';
 import Entry from './pages/Entry.jsx';
+import History from './pages/History.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -19,7 +20,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/signin" element={<SignIn />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/edit" element={<EditProfile />} />
-        <Route path="/entry" element={<Entry />} />
+        <Route path="/entry/new" element={<Entry />} />
+        <Route path="/list" element={<History />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
