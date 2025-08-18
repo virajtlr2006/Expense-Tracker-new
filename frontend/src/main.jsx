@@ -9,6 +9,9 @@ import Profile from './pages/Profile.jsx';
 import EditProfile from './pages/EditProfile.jsx';
 import Entry from './pages/Entry.jsx';
 import History from './pages/History.jsx'
+import UpdateHistory from './pages/UpdateHistory.jsx';
+import Delete from './pages/Delete.jsx';
+
 
 
 createRoot(document.getElementById('root')).render(
@@ -22,6 +25,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/profile/edit" element={<EditProfile />} />
         <Route path="/entry/new" element={<Entry />} />
         <Route path="/list" element={<History />} />
+        <Route path="/update/:id" element={<UpdateHistory />} />
+        <Route path="/delete" element={<Delete />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
