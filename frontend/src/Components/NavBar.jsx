@@ -5,8 +5,8 @@ import Link from './Link'
 
 const NavBar = () => {
   return (
-    // Main div of navbar
-    <div className='sticky flex justify-between px-20 gap-85  bg-stone-300 h-10 py-1.5 z-0 border-0 animate-gradie'>
+    // Main div of navbar 1173-60  sm-5
+    <div className='sticky flex justify-between px-20 gap-5 bg-stone-300 h-10 py-1.5 z-0 border-0 animate-gradie '>
       {/*Symbol and title  */}
       <div className='flex gap-2'>
         < CircleDollarSignIcon className='text-green-700 ml-2' />
@@ -28,7 +28,8 @@ const NavBar = () => {
         </button>
         <button className=' flex gap-2 text-gray-600 hover:text-black '>
           <LogInIcon className='text-green-700 ' />
-          Log In</button>
+          <p className=''>Log In</p>
+          </button>
       </div>
     </div>
   )
