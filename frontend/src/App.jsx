@@ -4,7 +4,7 @@ import Dashboard from './Components/Dashboard'
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-gray-800 h-screen'>
       <NavBar/>
       <Dashboard/>
     </div>
